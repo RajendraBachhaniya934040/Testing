@@ -11,7 +11,7 @@ const Home = (props) => {
   return(
     <View style={styles.container} >
       <TouchableOpacity onPress={() => navigation.navigate('profile')}>
-        <Text style={mainStyle.f20}>Go to Profile</Text>
+        <Text style={{fontSize: 20}}>Go to Profile</Text>
       </TouchableOpacity>
     </View>
   )

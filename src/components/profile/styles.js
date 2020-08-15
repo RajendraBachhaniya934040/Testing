@@ -5,7 +5,7 @@ import colors from '../../constants/colors';
 const styles = StyleSheet.create({
     profileView: {
       flex: 1,
-      backgroundColor: '#eeedee',
+      backgroundColor: colors.lightWhite,
       paddingHorizontal: 3,
     },
     nameStyle:{
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     infoStyle: {
       fontSize: 16,
       paddingTop: 2,
-      paddingLeft: 5,
+      paddingLeft: 15,
       color: colors.gray,
     },
     infoView: {
@@ -42,8 +42,8 @@ const styles = StyleSheet.create({
       backgroundColor: colors.white,
     },
     imageStyle:{
-      height: 120,
-      width: 120,
+      height: 122,
+      width: 122,
       margin: 5,
       borderRadius: 15,
     },
@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: colors.white,
       width: '100%',
+      marginTop: 2,
     },
     dotView: {
       padding: 5,
@@ -71,7 +72,7 @@ const styles = StyleSheet.create({
       height: 15,
       width: 15 ,
       borderRadius:13,
-      marginRight: 10,
+      marginRight: 12,
     },
 });
 

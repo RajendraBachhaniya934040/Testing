@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {Text, View, Image, ScrollView} from 'react-native';
+import {Text, View, Image, ScrollView, TouchableOpacity} from 'react-native';
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import EvilIcons from 'react-native-vector-icons/EvilIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
@@ -19,7 +19,7 @@ const Profile = () => {
     <View style={mainStyle.flex1}>
       <ScrollView>
         <Image source={coverImage} style={{height: 170, width: '100%'}}/>
-        <View style={styles.ProfileView}>
+        <View style={styles.profileView}>
           <View style={styles.profileStyle}>
             <View style={mainStyle.row}>
               <Text style={styles.nameStyle}>Anna</Text>
@@ -41,18 +41,24 @@ const Profile = () => {
           </View>
           <View style={styles.dotView}>
             <Text style={styles.recentStyle}>Recent Instagram Photos</Text>
-            <View style={mainStyle.row}>
+            <View style={[mainStyle.row, mainStyle.pR10]}>
               <View style={[styles.dotStyle,{backgroundColor: isEqual(activeSlide, 0)? colors.lightRed :colors.dimWhite}]} />
               <View style={[styles.dotStyle,{backgroundColor: isEqual(activeSlide, 1)? colors.lightRed : colors.dimWhite}]} />
             </View>
           </View>
           <UserImages setActive={setActive} images={chunk(images, 6)} />
-          <View style={styles.iconView}>
-            <Entypo  style={{marginRight:30}} name="cross" size={70} color={colors.pink}/>
-            <Entypo  name="star" size={45} color={colors.blue}/>
-            <Entypo  style={[mainStyle.pT5,mainStyle.mL30]} name="heart" size={60} color={colors.green}/>
-          </View>
         </View>
+         <View style={styles.iconView}>
+           <TouchableOpacity>
+             <Entypo style={mainStyle.pR35} name="cross" size={72} color={colors.pink}/>
+           </TouchableOpacity>
+            <TouchableOpacity>
+              <Entypo name="star" size={45} color={colors.blue}/>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Entypo style={[mainStyle.pT7,mainStyle.pL40]} name="heart" size={60} color={colors.green}/>
+            </TouchableOpacity>
+          </View>
       </ScrollView>
     </View>
   )

@@ -24,7 +24,7 @@ const UserImages = props => {
   };
 
   return (
-    <View style={mainStyle.whiteBgColor}>
+    <View style={[mainStyle.alignSelfCenter,mainStyle.whiteBgColor]}>
       <Carousel
         keyboardShouldPersistTaps='handled'
         sliderHeight={150}
